@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">baglinit-FeelsBook</string>
+<string name="app_name">baglinit-FeelsBook</string>
+
+<string name="Dlove">clickable Love button</string>
+<string name="Djoy">clickable joy button</string>
+<string name="Dsurprise">clickable surprise button</string>
+<string name="Danger">clickable anger button</string>
+<string name="Dsad">clickable sad button</string>
+<string name="Dfear">clickable fear button</string>
+<string name="lovecount">love count</string>
+
+    <string name="_0">0</string>
+    <string name="comment_max_100">comment max(100)</string>
+
+
 </resources>
+
+

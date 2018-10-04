@@ -6,13 +6,155 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/love_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Dlove"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/anger_imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/joy_imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/love" />
+
+    <ImageButton
+        android:id="@+id/joy_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Djoy"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/sad_imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/joy" />
+
+    <ImageButton
+        android:id="@+id/surprise_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Dsurprise"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/fear_imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/joy_imageButton"
+        app:srcCompat="@drawable/surprise" />
+
+    <ImageButton
+        android:id="@+id/anger_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Danger"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintEnd_toStartOf="@+id/sad_imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/anger" />
+
+    <ImageButton
+        android:id="@+id/sad_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Dsad"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sad" />
+
+    <ImageButton
+        android:id="@+id/fear_imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/Dfear"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sad_imageButton"
+        app:srcCompat="@drawable/fear" />
+
     <TextView
+        android:id="@+id/lovecount"
+        android:layout_width="47dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="72dp"
+        android:text="@string/_0"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/love_imageButton" />
+
+
+    <TextView
+        android:id="@+id/joycount"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/_0"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/joy_imageButton" />
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+    <ListView
+        android:id="@+id/history"
+        android:layout_width="368dp"
+        android:layout_height="304dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
