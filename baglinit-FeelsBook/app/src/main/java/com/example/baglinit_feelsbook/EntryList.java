@@ -30,9 +30,6 @@ public class EntryList {
 
         }
 
-        public void removeListener(Listener l){
-            listeners.remove(l);
-        }
 
         public EntryList(){
             entryList = new ArrayList<Entry>();
