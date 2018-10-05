@@ -19,8 +19,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-//Note did not finish saving information after app has been terminated
 
+//Purpose: Main activity to record feelings, count for feelings, and ordered history feelings that is editable
+//Design rational: for simplicity 1 activity will be used for the apps functions
+//Issues: have not completed apps function to save the data when the app is terminated
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,12 +51,41 @@ public class MainActivity extends AppCompatActivity {
     private EditText comment;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //initialize variable after set content (i.e. after main screen is establishedd
+        //initialize variable after set content (i.e. after main screen is established)
+
+        comment = findViewById(R.id.comment);
+
+        love_imageButton= findViewById(R.id.love_imageButton);
+        love_imageButton.setOnClickListener(listener);
+        lovecount = findViewById(R.id.lovecount);
+
+
+        joy_imageButton = findViewById(R.id.joy_imageButton);
+        joy_imageButton.setOnClickListener(listener);
+        joycount = findViewById(R.id.joycount);
+
+        surprise_imageButton= findViewById(R.id.surprise_imageButton);
+        surprise_imageButton.setOnClickListener(listener);
+        surprisecount = findViewById(R.id.surprisecount);
+
+        anger_imageButton = findViewById(R.id.anger_imageButton);
+        anger_imageButton.setOnClickListener(listener);
+        angercount = findViewById(R.id.angercount);
+
+        sad_imageButton = findViewById(R.id.sad_imageButton);
+        sad_imageButton.setOnClickListener(listener);
+        sadcount = findViewById(R.id.sadcount);
+
+        fear_imageButton = findViewById(R.id.fear_imageButton);
+        fear_imageButton.setOnClickListener(listener);
+        fearcount = findViewById(R.id.fearcount);
 
 
         entrylistView = findViewById(R.id.entrylistView);
@@ -74,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Edit entry when clicked once
         entrylistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
@@ -111,6 +143,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        //Delete feelings & decrement count when long clicked
 
         entrylistView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -154,40 +189,10 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-        comment = findViewById(R.id.comment);
-
-        love_imageButton= findViewById(R.id.love_imageButton);
-        love_imageButton.setOnClickListener(listener);
-        lovecount = findViewById(R.id.lovecount);
-
-
-        joy_imageButton = findViewById(R.id.joy_imageButton);
-        joy_imageButton.setOnClickListener(listener);
-        joycount = findViewById(R.id.joycount);
-
-        surprise_imageButton= findViewById(R.id.surprise_imageButton);
-        surprise_imageButton.setOnClickListener(listener);
-        surprisecount = findViewById(R.id.surprisecount);
-
-        anger_imageButton = findViewById(R.id.anger_imageButton);
-        anger_imageButton.setOnClickListener(listener);
-        angercount = findViewById(R.id.angercount);
-
-        sad_imageButton = findViewById(R.id.sad_imageButton);
-        sad_imageButton.setOnClickListener(listener);
-        sadcount = findViewById(R.id.sadcount);
-
-        fear_imageButton = findViewById(R.id.fear_imageButton);
-        fear_imageButton.setOnClickListener(listener);
-        fearcount = findViewById(R.id.fearcount);
-
-
-
     }
 
 
-
+//Link add method and increment method when feeling is clicked
     private View.OnClickListener listener = new View.OnClickListener(){
 
         @Override
@@ -232,6 +237,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
+
+    //Add info into entry object (time, date, feeling)
     public void addEntryAction(String feel){
 
         EntryListController et = new EntryListController();

@@ -1,4 +1,9 @@
 package com.example.baglinit_feelsbook;
+
+//Purpose: Establish Entry Object that will contain time, feeling & comment to be entered at the same time a feeling is clicked
+//Design rational: object will neatly organize information needed to be inserted at once when a button is clicked, exact object information will be returned when needed
+//Issues: No outstanding issues
+
 public class Entry {
 
     protected String Timestamp;
@@ -25,8 +30,6 @@ public class Entry {
         return this.Comment_Entry;
     }
 
-//    public String toString(){
-//        return getComment_Entry();
-//    }
+
 }
 

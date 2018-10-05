@@ -2,6 +2,11 @@ package com.example.baglinit_feelsbook;
 
 import android.widget.TextView;
 
+
+//Purpose: increase count of emotion when button is clicked
+//Design Rational: created seperate class to reduce code repistion in main activity
+//No outstanding issues
+
 public class DecreaseCount {
 
     void decrease(TextView emotion){

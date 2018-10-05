@@ -1,5 +1,10 @@
 package com.example.baglinit_feelsbook;
 
+
+
+//Purpose: Handle Simple events for the entry list
+//Design rational: Establish get EntryList method and add entry list method
+//Issues: No outstanding issues
 public class EntryListController {
 
     private  static EntryList entryList = null;

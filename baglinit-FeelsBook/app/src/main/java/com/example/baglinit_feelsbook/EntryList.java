@@ -5,6 +5,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
+
+//Purpose: Establish the list for entry objects (date, feel, comment) and methods needed to perform on them ( listeners, add entry, remove entry & update entry)
+//Design Rational: Establish methods needed to perform on an entry on the history ( add entry, remove entry, update entry)
+//No outstanding issues
+
 public class EntryList {
 
 
@@ -38,18 +43,19 @@ public class EntryList {
             return entryList;
         }
 
-        public void addEntry(Entry entry){          //switch entry with real function/class/activity
+        public void addEntry(Entry entry){
             entryList.add(entry);
             notifyListeners();
-            //progressing
+
         }
 
-        public void removeEntry(Entry entry){       //switch entry with real function/class/activity
+        public void removeEntry(Entry entry){
             entryList.remove(entry);
             notifyListeners();
 
         }
-        
+
+        //Sort based on tiime
         public void updateEntry(Entry entry, String time_change){
             entry.Timestamp = time_change;
 
