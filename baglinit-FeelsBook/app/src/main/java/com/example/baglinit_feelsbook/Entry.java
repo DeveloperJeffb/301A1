@@ -1,20 +1,18 @@
 package com.example.baglinit_feelsbook;
-import java.util.Date;
-
 public class Entry {
 
-    protected Date Timestamp;
+    protected String Timestamp;
     protected String Feeling;
     protected String Comment_Entry;
 
-    public Entry(Date Timestamp, String Feeling, String Comment_Entry) {
+    public Entry(String Timestamp, String Feeling, String Comment_Entry) {
         this.Timestamp = Timestamp;
         this.Feeling = Feeling;
         this.Comment_Entry = Comment_Entry;
     }
 
 
-    public Date getTimestamp() {
+    public String getTimestamp() {
         return this.Timestamp;
     }
 

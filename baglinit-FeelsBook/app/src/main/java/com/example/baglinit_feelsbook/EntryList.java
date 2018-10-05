@@ -2,6 +2,8 @@ package com.example.baglinit_feelsbook;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class EntryList {
 
@@ -14,7 +16,7 @@ public class EntryList {
             for (Listener listener: listeners){
                 listener.update();
             }
-            //CONTIENUE
+
         }
 
 
@@ -44,6 +46,23 @@ public class EntryList {
 
         public void removeEntry(Entry entry){       //switch entry with real function/class/activity
             entryList.remove(entry);
+            notifyListeners();
+
+        }
+        
+        public void updateEntry(Entry entry, String time_change){
+            entry.Timestamp = time_change;
+
+            Comparator<Entry> EntryTimeComparator = new Comparator<Entry>() {
+
+                @Override
+                public int compare(Entry o1, Entry o2) {
+                    String Entry1 = o1.getTimestamp().toUpperCase();
+                    String Entry2 = o2.getTimestamp().toUpperCase();
+                    return Entry1.compareTo(Entry2);
+                }};
+            Collections.sort(entryList, EntryTimeComparator);
+            //SORT ARRAY LIST
             notifyListeners();
 
         }
