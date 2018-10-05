@@ -98,8 +98,8 @@
 
     <TextView
         android:id="@+id/lovecount"
-        android:layout_width="47dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
         android:text="@string/_0"
         app:autoSizeTextType="uniform"
@@ -109,9 +109,9 @@
 
     <TextView
         android:id="@+id/joycount"
-        android:layout_width="45dp"
-        android:layout_height="18dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
         android:text="@string/_0"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/comment"
@@ -152,6 +152,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/surprisecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/surprise_imageButton" />
+
+    <TextView
+        android:id="@+id/fearcount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="@+id/sad_imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fear_imageButton" />
+
+    <TextView
+        android:id="@+id/sadcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/sad_imageButton" />
+
+    <TextView
+        android:id="@+id/angercount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/anger_imageButton" />
 
 
 </android.support.constraint.ConstraintLayout>
